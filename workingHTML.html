@@ -2,15 +2,17 @@
 	<html>
 	<body>
   		<p>CUCS - Yahtzee</p>
-  		
+
+  		<!-- Simple button to roll the dice><!-->
   		<button onclick="playGame()">Roll Dice</button>
   		<p id="rollButton"></p>
 
 <script>
 
-//Returns a random number between 1-6
+//Game Function
 var playGame = function()
 {
+	//Returns a number from 1-6
 	var diceRoll = function()
 	{
 		var roll = Math.random();
@@ -40,23 +42,17 @@ var playGame = function()
 		}
 	
 	}
+	//Setting the dice
 	var dice1 = diceRoll();
 	var dice2 = diceRoll();
 	var dice3 = diceRoll();
 	var dice4 = diceRoll();
 	var dice5 = diceRoll();
 
+	//Button for clicking that displays the dice roll
 	document.getElementById("rollButton").innerHTML = dice1 + ", " + dice2 + ", " + dice3 + ", " + dice4 + ", " + dice5
 }
-
-// Setting the 5 dice
-/*var dice1 = diceRoll();
-var dice2 = diceRoll();
-var dice3 = diceRoll();
-var dice4 = diceRoll();
-var dice5 = diceRoll();
-
-document.write(dice1 + "," + dice2 + "," + dice3 + "," + dice4 + "," + dice5); */   
+  
 </script>
 
 
